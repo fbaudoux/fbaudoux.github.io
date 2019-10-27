@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-27T22:18:17+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jog my memory</title><entry><title type="html">Connexion via ssh</title><link href="http://localhost:4000/linux/ssh/2019/10/19/connexion-ssh.html" rel="alternate" type="text/html" title="Connexion via ssh" /><published>2019-10-19T22:24:34+02:00</published><updated>2019-10-19T22:24:34+02:00</updated><id>http://localhost:4000/linux/ssh/2019/10/19/%20connexion%20ssh</id><content type="html" xml:base="http://localhost:4000/linux/ssh/2019/10/19/connexion-ssh.html">&lt;p&gt;I want to connect as a particular user (let’s say remoteUser for example) to a machine using ssh without typing any passport.&lt;br /&gt;
+I just have to :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;copy the content of my local public key ( &lt;strong&gt;~/.ssh/id_rsa.pub&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;paste it into the authorized_keys file of remoteUser (&lt;strong&gt;/home/remoteUser/.ssh/authorized_keys&lt;/strong&gt;) of the remote system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then I can connect the remote system using :&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ssh remoteUser@remoteMachineIp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">I want to connect as a particular user (let’s say remoteUser for example) to a machine using ssh without typing any passport. I just have to : copy the content of my local public key ( ~/.ssh/id_rsa.pub) paste it into the authorized_keys file of remoteUser (/home/remoteUser/.ssh/authorized_keys) of the remote system.</summary></entry></feed>
