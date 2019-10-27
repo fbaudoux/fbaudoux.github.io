@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Connexion via ssh</title>
+    <title>Pushing docker image to nexus OSS</title>
     <meta name="description" content="">
 
     <!-- Google Authorship Markup -->
@@ -14,15 +14,15 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@fred_from_crew">
-    <meta name="twitter:title" content="Connexion via ssh">
+    <meta name="twitter:title" content="Pushing docker image to nexus OSS">
     <meta name="twitter:description" content="">
     
     <meta property="twitter:image:src" content="http://localhost:4000/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://localhost:4000/linux/ssh/2019/10/19/connexion-ssh.html">
-    <meta property="og:title" content="Connexion via ssh">
+    <meta property="og:url" content="http://localhost:4000/linux/ssh/2019/10/19/docker-command.html">
+    <meta property="og:title" content="Pushing docker image to nexus OSS">
     
     <meta property="og:image" content="http://localhost:4000/assets/img/blog-image.png">
     
@@ -30,7 +30,7 @@
     <meta property="og:site_name" content="Jog my memory">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="Connexion via ssh"/>
+    <meta itemprop="name" content="Pushing docker image to nexus OSS"/>
     <meta itemprop="description" content="">
     <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/linux/ssh/2019/10/19/connexion-ssh.html">
+    <link rel="canonical" href="http://localhost:4000/linux/ssh/2019/10/19/docker-command.html">
     <link rel="alternate" type="application/rss+xml" title="Jog my memory" href="http://localhost:4000/feed.xml" />
 </head>
 
@@ -100,29 +100,35 @@
         
             <time itemprop="datePublished" datetime="2019-10-19T22:24:34+02:00" class="date">19 Oct 2019</time>
         
-        <h1 class="post-title" itemprop="name">Connexion via ssh</h1>
+        <h1 class="post-title" itemprop="name">Pushing docker image to nexus OSS</h1>
         <p itemprop="description" class="subtitle"></p>
     </div>
 </header>
         <section class="post">
 
             <article role="article" id="post" class="post-content" itemprop="articleBody">
-                <p>I want to connect as a particular user (let’s say remoteUser for example) to a machine using ssh without typing any passport.<br />
-I just have to :</p>
-<ul>
-  <li>copy the content of my local public key ( <strong>~/.ssh/id_rsa.pub</strong>)</li>
-  <li>paste it into the authorized_keys file of remoteUser (<strong>/home/remoteUser/.ssh/authorized_keys</strong>) of the remote system.</li>
-</ul>
+                <p>I have a local image if my software <strong>MyTool</strong> created from a dockerfile.<br />
+I want to push it into my nexus repository as the version 1.0 of MyTool.<br />
+Let’s say my nexus is available on port 7777.</p>
 
-<p>Then I can connect the remote system using :</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ssh remoteUser@remoteMachineIp
+<p>I start by getting the image reference on my local system:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker images
+</code></pre></div></div>
+
+<p>then I tag my image:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker tag b3b8a2229953 @nexusIP:7777/mytool:1.0
+</code></pre></div></div>
+
+<p>and I push it to nexus:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker push @nexusIP:7777/mytool:1.0
 </code></pre></div></div>
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/linux/ssh/2019/10/19/connexion-ssh.html%20via%20&#64;fred_from_crew&hashtags="
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/linux/ssh/2019/10/19/docker-command.html%20via%20&#64;fred_from_crew&hashtags="
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>

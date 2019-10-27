@@ -1,10 +1,18 @@
 [
   
     {
-      "title"    : "Connexion via ssh",
+      "title"    : "Pushing docker image to nexus OSS",
       "tags"     : "",
       "categories"     : "",
-      "url"      : "/linux/ssh/2019/10/19/connexion-ssh.html",
+      "url"      : "/linux/ssh/2019/10/19/docker-command.html",
+      "date"     : "19 Oct 2019"
+    } ,
+  
+    {
+      "title"    : "SSH Connection",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/linux/ssh/2019/10/19/ssh-connection.html",
       "date"     : "19 Oct 2019"
     } 
   

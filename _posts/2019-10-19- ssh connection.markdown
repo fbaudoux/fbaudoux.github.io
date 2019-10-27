@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Connexion via ssh"
+title:  "SSH Connection"
 date:   2019-10-19 22:24:34 +0200
 categories: linux ssh
 ---
