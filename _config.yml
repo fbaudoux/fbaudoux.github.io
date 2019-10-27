@@ -22,7 +22,7 @@ github_username:  fbaudoux
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-architect
+theme: minima
 plugins:
   - jekyll-feed
 
