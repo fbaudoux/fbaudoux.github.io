@@ -9,3 +9,6 @@ I know there's a k8s installation on the machine, i need more informations:
 ```
  kubectl cluster-info
 ```
+```
+ kubectl get nodes
+```
