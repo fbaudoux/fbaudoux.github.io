@@ -16,3 +16,7 @@ I know there's a k8s installation on the machine, i need more informations.
 ```
  kubectl describe node %NODE_NAME%
 ```
+
+```
+ kubectl get pods -o wise
+```
