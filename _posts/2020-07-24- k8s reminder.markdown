@@ -20,3 +20,7 @@ I know there's a k8s installation on the machine, i need more informations.
 ```
  kubectl get pods -o wise
 ```
+
+```
+ kubectl get pod %POD_NAME% -o json
+```
