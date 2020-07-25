@@ -24,3 +24,7 @@ I know there's a k8s installation on the machine, i need more informations.
 ```
  kubectl get pod %POD_NAME% -o json
 ```
+
+```
+ kubectl get ns
+```
